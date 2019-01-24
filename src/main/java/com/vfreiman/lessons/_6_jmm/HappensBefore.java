@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
+/*
+Is writing atomic?
+Is reading atomic?
+Is there a time between "if (localI == getI())" and "setI(newI);"
+CAS in java executes in a native method
+ */
 public class HappensBefore {
     public volatile int i = 0;
 

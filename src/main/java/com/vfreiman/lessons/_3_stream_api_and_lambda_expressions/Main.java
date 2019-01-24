@@ -1,6 +1,5 @@
 package com.vfreiman.lessons._3_stream_api_and_lambda_expressions;
 
-import com.sun.deploy.util.StringUtils;
 import com.vfreiman.lessons._2_collections.MyLinkedQueue;
 
 import java.util.*;
@@ -262,7 +261,7 @@ public class Main {
 
         Comparator<User> comparing = Comparator.comparing(User::getName);
 
-        String[] strings = StringUtils.splitString("asdf,asfd2,asdf3", ",");
+//        String[] strings = StringUtils.splitString("asdf,asfd2,asdf3", ",");
 
         MyFunctionalInterace<String> myFunctionalInterace =
                 ((arg1, arg2) -> new MyObject(arg1 + ", hi2!", arg2));
