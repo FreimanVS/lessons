@@ -7,9 +7,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
-    launch maven from the path "java" folder
-    compile: javac -encoding utf8 com/vfreiman/lessons/_5_class_loaders/MyDynamicReloadingClassLoaderMain.java
-    launch: java com.vfreiman.lessons._5_class_loaders.MyDynamicReloadingClassLoaderMain
+    open cmd in the path "src/main/java"
+    compile with the command: javac -encoding utf8 com/vfreiman/lessons/_5_class_loaders/MyDynamicReloadingClassLoaderMain.java
+    launch with the command: java com.vfreiman.lessons._5_class_loaders.MyDynamicReloadingClassLoaderMain
  */
 public class MyDynamicReloadingClassLoaderMain {
 
