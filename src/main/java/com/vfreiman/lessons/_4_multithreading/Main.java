@@ -43,18 +43,6 @@ public class Main {
     Phaser phaser = new Phaser(2);
 
     volatile long i = 0L;
-    public static void main(String[] args) throws InterruptedException, ExecutionException {
-//        DiscordService.getToken();
-//        String token = "NTIxMzk5NjE0NDc4MjIxMzIz.Du8GxQ.6dYAO_fH3xGgy8PUUaF7BSHLiy0";
-//        IDiscordClient client = DiscordService.createClient(token, false);
-//        System.out.println(client.getChannels());
-
-//         System.out.println(TwitchService.getUserByLogin("sasliminta1982"));
-
-//          System.out.println(Translater.theMostRus("Привет. Как are?"));
-
-        new Main().main();
-    }
 
     public void main() throws ExecutionException, InterruptedException {
         ExecutorService es =
@@ -574,5 +562,8 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        new Main().main();
     }
 }
