@@ -42,6 +42,8 @@ public class Main {
 
     Phaser phaser = new Phaser(2);
 
+
+
     volatile long i = 0L;
 
     public void main() throws ExecutionException, InterruptedException {
@@ -60,9 +62,19 @@ public class Main {
         System.out.println("Main Thread started");
 
         /**
+         * ThreadLocalRandom
+         */
+        threadLocalRandom();
+
+        /**
+         * ExecutorCompletionService
+         */
+//        executorCompletionService();
+
+        /**
          * atomics
          */
-        atomics();
+//        atomics();
 
         /**
          * synchronizers
@@ -280,6 +292,38 @@ public class Main {
 
         closeExecutorService(es);
         System.out.println("Main Thread ended");
+    }
+
+    private void threadLocalRandom() {
+        int i = ThreadLocalRandom.current().nextInt(100);
+        System.out.println(i);
+    }
+
+    private void executorCompletionService() {
+        Executor executor = new Executor() {
+            @Override
+            public void execute(Runnable command) {
+                command.run();
+            }
+        };
+        ExecutorCompletionService<String> ecs = new ExecutorCompletionService<>(executor);
+        Future<String> submit = ecs.submit(() -> "hi");
+        Future<String> submit2 = ecs.submit(() -> "hi2");
+        try {
+            while (true) {
+                //it is waiting for the next task if there is no tasks right now
+                Future<String> take = ecs.take();
+                System.out.println(take.get());
+
+                //it throws a java.lang.NullPointerException if there is no tasks right now
+                Future<String> poll = ecs.poll();
+                System.out.println(poll.get());
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     private void atomics() {

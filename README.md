@@ -5,3 +5,4 @@
 4) Multithreading;
 5) Class loaders;
 6) JMM
+7) Patterns
