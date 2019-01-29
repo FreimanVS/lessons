@@ -1,5 +1,8 @@
 package com.vfreiman.lessons._7_patterns.behavioral;
 
+/**
+ * Делегирует выполнение методов другим классам.
+ */
 public class Delegate {
 
     private static class A {

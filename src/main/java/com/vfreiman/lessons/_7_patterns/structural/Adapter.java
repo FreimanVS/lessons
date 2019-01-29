@@ -1,5 +1,8 @@
 package com.vfreiman.lessons._7_patterns.structural;
 
+/**
+ * Адаптер — это структурный паттерн проектирования, который позволяет объектам с несовместимыми интерфейсами работать вместе.
+ */
 public class Adapter {
     private class Socket {
         public int getVolt(){

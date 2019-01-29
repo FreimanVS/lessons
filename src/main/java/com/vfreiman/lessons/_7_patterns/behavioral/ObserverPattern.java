@@ -3,6 +3,10 @@ package com.vfreiman.lessons._7_patterns.behavioral;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Наблюдатель — это поведенческий паттерн проектирования, который создаёт механизм подписки,
+ * позволяющий одним объектам следить и реагировать на события, происходящие в других объектах.
+ */
 public class ObserverPattern {
     private static abstract interface Subject {
         public abstract void register(Observer obj);

@@ -2,6 +2,11 @@ package com.vfreiman.lessons._7_patterns.creational;
 
 import java.util.Objects;
 
+/**
+ * Абстрактная фабрика — это порождающий паттерн проектирования, который позволяет создавать семейства связанных
+ * объектов, не привязываясь к конкретным классам создаваемых объектов.
+ * Имеет несколько методов произдводства, причём произведённое связанно друг с другом.
+ */
 public class AbstractFactoryPattern {
 
     private static abstract interface Fruit {}
@@ -33,7 +38,7 @@ public class AbstractFactoryPattern {
     public static void main(String[] args) {
         final String type = "apple";
 //        final String type = "orange";
-//        final String type = "something";
+//        final String type = "something else";
         final Client client = configure(type);
 
         Objects.requireNonNull(client);

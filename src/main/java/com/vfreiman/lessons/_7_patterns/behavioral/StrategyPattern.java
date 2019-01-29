@@ -1,9 +1,14 @@
 package com.vfreiman.lessons._7_patterns.behavioral;
 
+/**
+ * Стратегия — это поведенческий паттерн проектирования, который определяет семейство схожих алгоритмов и помещает
+ * каждый из них в собственный класс, после чего алгоритмы можно взаимозаменять прямо во время исполнения программы.
+ */
 public class StrategyPattern {
 
     private class A {
         private Strategy strategy;
+
         public void setStrategy(Strategy strategy) {
             this.strategy = strategy;
         }

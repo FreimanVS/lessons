@@ -1,5 +1,9 @@
 package com.vfreiman.lessons._7_patterns.creational;
 
+/**
+ * Строитель — это порождающий паттерн проектирования, который позволяет создавать сложные объекты пошагово.
+ * Строитель даёт возможность использовать один и тот же код строительства для получения разных представлений объектов.
+ */
 public class Builder {
 
     private String field;
@@ -27,10 +31,12 @@ public class Builder {
     private class MyClass {
         private String field;
         private int field2;
+
         private MyClass(Builder builder) {
             this.field = builder.getField();
             this.field2 = builder.getField2();
         }
+
         public String getField() {
             return field;
         }
