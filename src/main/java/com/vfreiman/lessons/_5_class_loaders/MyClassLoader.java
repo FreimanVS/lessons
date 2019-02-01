@@ -1,6 +1,10 @@
 package com.vfreiman.lessons._5_class_loaders;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * MyClassLoader is for loading classes from a project's root directory
