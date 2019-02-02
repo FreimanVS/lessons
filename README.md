@@ -1,6 +1,6 @@
 # lessons
 1) Algorithms and data structures;
-2) Collections;
+2) Collections + MyLinkedQueue Collection https://github.com/FreimanVS/example-collections
 3) Stream API and lambda expressions;
 4) Multithreading;
 5) Class loaders;
